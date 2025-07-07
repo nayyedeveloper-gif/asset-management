@@ -1,0 +1,32 @@
+﻿@model AMS.Models.DashboardViewModel.DashboardSummaryViewModel
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Department</th>
+            <th>Joined</th>
+        </tr>
+    </thead>
+    <tbody>
+    @if (Model.listUserProfile != null && Model.listUserProfile.Any())
+    {
+        @foreach (var user in Model.listUserProfile.Take(5))
+        {
+            <tr>
+                <td>@user.FirstName @user.LastName</td>
+                <td>@user.Email</td>
+                <td>@user.DepartmentDisplay</td>
+                <td>@user.CreatedDate.ToString("yyyy-MM-dd")</td>
+            </tr>
+        }
+    }
+    else
+    {
+        <tr>
+            <td colspan="4" class="text-center">No users found</td>
+        </tr>
+    }
+    </tbody>
+</table>

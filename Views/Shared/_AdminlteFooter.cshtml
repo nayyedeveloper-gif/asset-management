@@ -1,0 +1,169 @@
+﻿@using Microsoft.Extensions.Options;
+@inject IOptions<AMS.Models.CommonViewModel.ApplicationInfo> _ApplicationInfo;
+
+<footer class="main-footer luxury-footer">
+    <div class="footer-content">
+        <div class="footer-brand">
+            <div class="footer-logo">
+                <i class="fas fa-gem"></i>
+            </div>
+            <div class="footer-text">
+                <strong class="footer-title">29 Gem & Jewellery</strong>
+                <span class="footer-subtitle">Where Excellence Meets Elegance</span>
+            </div>
+        </div>
+        
+        <div class="footer-info">
+            <div class="footer-copyright">
+                <span>&copy; 2024 29 Gem & Jewellery. All rights reserved.</span>
+                <div class="developer-info">
+                    <span class="developer-text">Developed by</span>
+                    <span class="developer-name">Nay Ye</span>
+                </div>
+            </div>
+            <div class="footer-version">
+                <span class="version-badge">v2.0.0</span>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+.luxury-footer {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    border-top: 3px solid #f59e0b;
+    padding: 20px 30px;
+    color: #e2e8f0;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.3);
+    border: 2px solid #fbbf24;
+}
+
+.footer-logo i {
+    font-size: 18px;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.footer-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: #f59e0b;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.5px;
+    margin-bottom: 2px;
+}
+
+.footer-subtitle {
+    font-size: 11px;
+    font-weight: 300;
+    color: #9ca3af;
+    letter-spacing: 0.3px;
+    font-style: italic;
+}
+
+.footer-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-copyright {
+    font-size: 13px;
+    color: #cbd5e1;
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.developer-info {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: 2px;
+}
+
+.developer-text {
+    font-size: 11px;
+    color: #9ca3af;
+    font-weight: 400;
+}
+
+.developer-name {
+    font-size: 12px;
+    color: #f59e0b;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.footer-version {
+    display: flex;
+    align-items: center;
+}
+
+.version-badge {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.3);
+    border: 1px solid #60a5fa;
+}
+
+@@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+    
+    .footer-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .footer-copyright {
+        align-items: center;
+    }
+    
+    .developer-info {
+        justify-content: center;
+    }
+}
+</style>
+
+

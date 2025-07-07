@@ -1,0 +1,531 @@
+﻿@model AMS.Models.DashboardViewModel.DashboardSummaryViewModel
+@{
+    var totalUsers = Model.TotalUser;
+    var totalDepartments = 0; // Model doesn't have these properties
+    var totalDesignations = 0; // Model doesn't have these properties
+    var totalSubDepartments = 0; // Model doesn't have these properties
+    var totalSuppliers = 0; // Model doesn't have these properties
+    var totalAssetRequests = Model.TotalAssetRequest;
+}
+
+<div class="user-summary-section">
+    <!-- Modern Section Header -->
+    <div class="section-header">
+        <div class="section-title">
+            <i class="fas fa-users"></i>
+            <h3>User Overview</h3>
+        </div>
+        <div class="section-subtitle">
+            <p>System users and organizational statistics</p>
+        </div>
+    </div>
+
+    <!-- Modern User Stats Grid -->
+    <div class="user-stats-grid">
+        <!-- Total Users Card -->
+        <div class="user-stat-card total-users">
+            <div class="stat-icon">
+                <i class="fas fa-users"></i>
+            </div>
+            <div class="stat-content">
+                <div class="stat-number">@totalUsers</div>
+                <div class="stat-label">Total Users</div>
+                <div class="stat-description">Registered system users</div>
+            </div>
+            <div class="stat-trend">
+                <i class="fas fa-user-plus"></i>
+                <span>Active</span>
+            </div>
+        </div>
+
+        <!-- Departments Card -->
+        <div class="user-stat-card departments">
+            <div class="stat-icon">
+                <i class="fas fa-building"></i>
+            </div>
+            <div class="stat-content">
+                <div class="stat-number">@totalDepartments</div>
+                <div class="stat-label">Departments</div>
+                <div class="stat-description">Organizational units</div>
+            </div>
+            <div class="stat-trend">
+                <i class="fas fa-sitemap"></i>
+                <span>Structured</span>
+            </div>
+        </div>
+
+        <!-- Sub Departments Card -->
+        <div class="user-stat-card sub-departments">
+            <div class="stat-icon">
+                <i class="fas fa-layer-group"></i>
+            </div>
+            <div class="stat-content">
+                <div class="stat-number">@totalSubDepartments</div>
+                <div class="stat-label">Sub Departments</div>
+                <div class="stat-description">Specialized teams</div>
+            </div>
+            <div class="stat-trend">
+                <i class="fas fa-network-wired"></i>
+                <span>Organized</span>
+            </div>
+        </div>
+
+        <!-- Designations Card -->
+        <div class="user-stat-card designations">
+            <div class="stat-icon">
+                <i class="fas fa-id-badge"></i>
+            </div>
+            <div class="stat-content">
+                <div class="stat-number">@totalDesignations</div>
+                <div class="stat-label">Designations</div>
+                <div class="stat-description">Job titles & roles</div>
+            </div>
+            <div class="stat-trend">
+                <i class="fas fa-user-tie"></i>
+                <span>Defined</span>
+            </div>
+        </div>
+
+        <!-- Suppliers Card -->
+        <div class="user-stat-card suppliers">
+            <div class="stat-icon">
+                <i class="fas fa-truck"></i>
+            </div>
+            <div class="stat-content">
+                <div class="stat-number">@totalSuppliers</div>
+                <div class="stat-label">Suppliers</div>
+                <div class="stat-description">Vendor partners</div>
+            </div>
+            <div class="stat-trend">
+                <i class="fas fa-handshake"></i>
+                <span>Partners</span>
+            </div>
+        </div>
+
+        <!-- Asset Requests Card -->
+        <div class="user-stat-card requests">
+            <div class="stat-icon">
+                <i class="fas fa-clipboard-list"></i>
+            </div>
+            <div class="stat-content">
+                <div class="stat-number">@totalAssetRequests</div>
+                <div class="stat-label">Asset Requests</div>
+                <div class="stat-description">Pending requests</div>
+            </div>
+            <div class="stat-trend info">
+                <i class="fas fa-clock"></i>
+                <span>Pending</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Modern User Summary Section */
+.user-summary-section {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Modern Section Header */
+.section-header {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.section-title i {
+    font-size: 1.5rem;
+    color: #3b82f6;
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2);
+}
+
+.section-title h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+    letter-spacing: -0.025em;
+}
+
+.section-subtitle p {
+    color: #64748b;
+    font-size: 0.875rem;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Modern User Stats Grid */
+.user-stats-grid {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+/* Modern User Stat Card */
+.user-stat-card {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.user-stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+}
+
+.user-stat-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.1);
+}
+
+/* User Stat Card Variants */
+.total-users::before {
+    background: linear-gradient(90deg, #3b82f6, #1d4ed8);
+}
+
+.departments::before {
+    background: linear-gradient(90deg, #10b981, #059669);
+}
+
+.sub-departments::before {
+    background: linear-gradient(90deg, #f59e0b, #d97706);
+}
+
+.designations::before {
+    background: linear-gradient(90deg, #8b5cf6, #7c3aed);
+}
+
+.suppliers::before {
+    background: linear-gradient(90deg, #0ea5e9, #0284c7);
+}
+
+.requests::before {
+    background: linear-gradient(90deg, #ef4444, #dc2626);
+}
+
+/* User Stat Icon */
+.user-stat-card .stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: white;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.total-users .stat-icon {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+}
+
+.departments .stat-icon {
+    background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.sub-departments .stat-icon {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+}
+
+.designations .stat-icon {
+    background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+}
+
+.suppliers .stat-icon {
+    background: linear-gradient(135deg, #0ea5e9, #0284c7);
+}
+
+.requests .stat-icon {
+    background: linear-gradient(135deg, #ef4444, #dc2626);
+}
+
+/* User Stat Content */
+.user-stat-card .stat-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.user-stat-card .stat-number {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: #1e293b;
+    line-height: 1;
+    margin-bottom: 4px;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.user-stat-card .stat-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 2px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.user-stat-card .stat-description {
+    font-size: 0.75rem;
+    color: #64748b;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* User Stat Trend */
+.user-stat-card .stat-trend {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #10b981;
+    padding: 6px 10px;
+    background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+    border-radius: 6px;
+    border: 1px solid #86efac;
+    flex-shrink: 0;
+}
+
+.user-stat-card .stat-trend.info {
+    color: #0ea5e9;
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    border-color: #60a5fa;
+}
+
+.user-stat-card .stat-trend i {
+    font-size: 0.7rem;
+}
+
+/* Modern User Quick Actions */
+.user-quick-actions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 12px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.user-quick-actions .action-item {
+    position: relative;
+}
+
+.user-quick-actions .action-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border-radius: 10px;
+    color: #374151;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.8rem;
+    transition: all 0.3s ease;
+    border: 1px solid #e2e8f0;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.user-quick-actions .action-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.1), transparent);
+    transition: left 0.5s ease;
+}
+
+.user-quick-actions .action-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px -4px rgba(0, 0, 0, 0.1);
+    color: #3b82f6;
+    text-decoration: none;
+}
+
+.user-quick-actions .action-link:hover::before {
+    left: 100%;
+}
+
+.user-quick-actions .action-link i {
+    font-size: 1rem;
+    color: #3b82f6;
+    transition: all 0.3s ease;
+}
+
+.user-quick-actions .action-link:hover i {
+    transform: scale(1.1);
+}
+
+.user-quick-actions .action-link span {
+    font-weight: 600;
+}
+
+/* Modern Responsive Design */
+@@media (max-width: 1200px) {
+    .user-stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    }
+}
+
+@@media (max-width: 768px) {
+    .user-summary-section {
+        padding: 20px;
+    }
+    
+    .section-title {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .section-title h3 {
+        font-size: 1.125rem;
+    }
+    
+    .section-subtitle p {
+        font-size: 0.8rem;
+    }
+    
+    .user-stats-grid {
+        grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+        gap: 12px;
+    }
+    
+    .user-stat-card {
+        padding: 16px;
+        flex-direction: column;
+        text-align: center;
+        gap: 12px;
+    }
+    
+    .user-stat-card .stat-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+    
+    .user-stat-card .stat-number {
+        font-size: 1.5rem;
+    }
+    
+    .user-stat-card .stat-trend {
+        align-self: center;
+    }
+    
+    .user-quick-actions {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        gap: 10px;
+    }
+    
+    .user-quick-actions .action-link {
+        padding: 12px 14px;
+        font-size: 0.75rem;
+    }
+}
+
+@@media (max-width: 480px) {
+    .user-summary-section {
+        padding: 16px;
+    }
+    
+    .user-stat-card {
+        padding: 14px;
+    }
+    
+    .user-stat-card .stat-number {
+        font-size: 1.25rem;
+    }
+    
+    .user-quick-actions {
+        grid-template-columns: 1fr;
+    }
+    
+    .user-quick-actions .action-link {
+        justify-content: center;
+    }
+}
+
+/* Modern Animations */
+@@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.user-stat-card {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.user-stat-card:nth-child(1) { animation-delay: 0.1s; }
+.user-stat-card:nth-child(2) { animation-delay: 0.2s; }
+.user-stat-card:nth-child(3) { animation-delay: 0.3s; }
+.user-stat-card:nth-child(4) { animation-delay: 0.4s; }
+.user-stat-card:nth-child(5) { animation-delay: 0.5s; }
+.user-stat-card:nth-child(6) { animation-delay: 0.6s; }
+
+/* Modern Loading States */
+.user-stat-card.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.user-stat-card.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    border: 2px solid #f3f4f6;
+    border-top: 2px solid #3b82f6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+</style>
