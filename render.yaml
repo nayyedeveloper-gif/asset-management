@@ -1,0 +1,49 @@
+services:
+  - type: web
+    name: 29-asset-management
+    env: dotnet
+    buildCommand: dotnet build
+    startCommand: dotnet run --urls http://0.0.0.0:$PORT
+    envVars:
+      - key: ASPNETCORE_ENVIRONMENT
+        value: Production
+      - key: ASPNETCORE_URLS
+        value: http://0.0.0.0:$PORT
+      - key: DB_HOST
+        fromDatabase:
+          name: ams-database
+          property: host
+      - key: DB_NAME
+        fromDatabase:
+          name: ams-database
+          property: database
+      - key: DB_USER
+        fromDatabase:
+          name: ams-database
+          property: username
+      - key: DB_PASSWORD
+        fromDatabase:
+          name: ams-database
+          property: password
+      - key: DB_PORT
+        fromDatabase:
+          name: ams-database
+          property: port
+      - key: SMTP_SERVER
+        value: smtp.gmail.com
+      - key: SMTP_PORT
+        value: 587
+      - key: SMTP_USERNAME
+        sync: false
+      - key: SMTP_PASSWORD
+        sync: false
+      - key: FROM_EMAIL
+        sync: false
+      - key: JWT_SECRET_KEY
+        generateValue: true
+
+databases:
+  - name: ams-database
+    databaseName: ams
+    user: ams_user
+    plan: free 

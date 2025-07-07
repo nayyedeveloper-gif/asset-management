@@ -10,6 +10,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json.Serialization;
 using Microsoft.AspNetCore.Server.IISIntegration;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,18 +29,22 @@ builder.Services.AddScoped<ApplicationDbContext>();
 var _ApplicationInfo = builder.Configuration.GetSection("ApplicationInfo").Get<ApplicationInfo>();
 string _GetConnStringName = ControllerExtensions.GetConnectionString(builder.Configuration);
 
-if (_ApplicationInfo.DBConnectionStringName == ConnectionStrings.connMySQL)
+// Add DbContext
+builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
-    builder.Services.AddDbContextPool<ApplicationDbContext>(options => options.UseMySql(_GetConnStringName, ServerVersion.AutoDetect(_GetConnStringName)));
-}
-else if(_ApplicationInfo.DBConnectionStringName == ConnectionStrings.connPostgreSQL)
-{
-    builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(_GetConnStringName));
-}
-else
-{
-    builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(_GetConnStringName));
-}
+    var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+    
+    // Check if it's PostgreSQL connection
+    if (connectionString.Contains("Host=") || connectionString.Contains("Server=") && connectionString.Contains("Port="))
+    {
+        options.UseNpgsql(connectionString);
+    }
+    else
+    {
+        // Default to MySQL
+        options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+    }
+}, ServiceLifetime.Scoped);
 
 // Add Identity services
 builder.Services.AddIdentity<ApplicationUser, IdentityRole>(options =>
@@ -136,6 +141,9 @@ builder.Services.AddCors(options =>
     });
 });
 
+// Add health checks
+builder.Services.AddHealthChecks();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -174,6 +182,9 @@ app.UseCors(app.Environment.IsDevelopment() ? "Development" : "Production");
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Dashboard}/{action=Index}/{id?}");
+
+// Add health check endpoint
+app.MapHealthChecks("/health");
 
 // Database initialization - moved to after app build
 using (var scope = app.Services.CreateScope())

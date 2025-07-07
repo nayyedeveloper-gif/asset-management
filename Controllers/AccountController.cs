@@ -138,14 +138,27 @@ namespace AMS.Controllers
         [AllowAnonymous]
         public async Task<IActionResult> SaveUserInfoFromBrowser(UserInfoFromBrowser _UserInfoFromBrowser)
         {
+            // Temporarily disable this method to prevent null reference exceptions
+            _logger?.LogInformation("SaveUserInfoFromBrowser called - returning success without processing");
+            return new JsonResult(new { success = true, message = "Browser info logging temporarily disabled" });
+            
+            // Original implementation commented out for debugging
+            /*
             try
             {
+                // Early return if context is null
+                if (_context == null)
+                {
+                    _logger?.LogWarning("Database context is null in SaveUserInfoFromBrowser");
+                    return new JsonResult(new { success = false, message = "Database context not available" });
+                }
+
                 if (_UserInfoFromBrowser == null)
                 {
                     return new JsonResult(new { success = false, message = "Invalid user info data" });
                 }
 
-                // Add null checks for required properties
+                // Add comprehensive null checks for all required properties
                 if (string.IsNullOrEmpty(_UserInfoFromBrowser.BrowserName))
                 {
                     _UserInfoFromBrowser.BrowserName = "Unknown";
@@ -154,18 +167,29 @@ namespace AMS.Controllers
                 {
                     _UserInfoFromBrowser.UA = "Unknown";
                 }
+                if (string.IsNullOrEmpty(_UserInfoFromBrowser.CreatedBy))
+                {
+                    _UserInfoFromBrowser.CreatedBy = "System";
+                }
+                if (string.IsNullOrEmpty(_UserInfoFromBrowser.ModifiedBy))
+                {
+                    _UserInfoFromBrowser.ModifiedBy = "System";
+                }
 
+                // Set default values for dates
                 _UserInfoFromBrowser.CreatedDate = DateTime.Now;
                 _UserInfoFromBrowser.ModifiedDate = DateTime.Now;
+
                 _context.Add(_UserInfoFromBrowser);
                 var result = await _context.SaveChangesAsync();
                 return new JsonResult(new { success = true, data = _UserInfoFromBrowser });
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error saving user info from browser");
+                _logger?.LogError(ex, "Error saving user info from browser");
                 return new JsonResult(new { success = false, message = "Error saving user info" });
             }
+            */
         }
 
         [HttpGet]

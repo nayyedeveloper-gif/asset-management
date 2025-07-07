@@ -2,19 +2,42 @@
 using Microsoft.EntityFrameworkCore;
 using AMS.Models;
 using AMS.Models.CommonViewModel;
+using Microsoft.Extensions.Configuration;
 
 namespace AMS.Data
 {
     public class ApplicationDbContext : AuditableIdentityContext
     {
-        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
+        private readonly IConfiguration _configuration;
+
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options, IConfiguration configuration) : base(options)
         {
+            _configuration = configuration;
         }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
             builder.Entity<ItemDropdownListViewModel>().HasNoKey();
+        }
+
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        {
+            if (!optionsBuilder.IsConfigured)
+            {
+                var connectionString = _configuration.GetConnectionString("DefaultConnection");
+                
+                // Check if it's PostgreSQL connection
+                if (connectionString.Contains("Host=") || connectionString.Contains("Server=") && connectionString.Contains("Port="))
+                {
+                    optionsBuilder.UseNpgsql(connectionString);
+                }
+                else
+                {
+                    // Default to MySQL
+                    optionsBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString));
+                }
+            }
         }
 
         public DbSet<ApplicationUser> ApplicationUser { get; set; }
