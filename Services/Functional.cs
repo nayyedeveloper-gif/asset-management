@@ -347,10 +347,10 @@ namespace AMS.Services
                     profile.ApplicationUserId = superAdmin.Id;
                     profile.FirstName = "Super";
                     profile.LastName = "Admin";
-                    profile.PhoneNumber = "+8801674411603";
+                    profile.PhoneNumber = "09775630740";
                     profile.Email = superAdmin.Email;
-                    profile.Address = "R/A, Dhaka";
-                    profile.Country = "Bangladesh";
+                    profile.Address = "Yangon";
+                    profile.Country = "Myanmar";
                     profile.ProfilePicture = "/images/UserIcon/Admin.png";
 
                     profile.RoleId = 1;
