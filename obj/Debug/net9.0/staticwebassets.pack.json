@@ -905,10 +905,6 @@
       "PackagePath": "staticwebassets/AdminLTE/docs/assets/plugins/bootstrap/js/bootstrap.min.js.map"
     },
     {
-      "Id": "/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/wwwroot/AdminLTE/docs/assets/plugins/fontawesome-free/css/all.css",
-      "PackagePath": "staticwebassets/AdminLTE/docs/assets/plugins/fontawesome-free/css/all.css"
-    },
-    {
       "Id": "/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/wwwroot/AdminLTE/docs/assets/plugins/fontawesome-free/css/all.min.css",
       "PackagePath": "staticwebassets/AdminLTE/docs/assets/plugins/fontawesome-free/css/all.min.css"
     },
@@ -919,10 +915,6 @@
     {
       "Id": "/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/wwwroot/AdminLTE/docs/assets/plugins/fontawesome-free/css/brands.min.css",
       "PackagePath": "staticwebassets/AdminLTE/docs/assets/plugins/fontawesome-free/css/brands.min.css"
-    },
-    {
-      "Id": "/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/wwwroot/AdminLTE/docs/assets/plugins/fontawesome-free/css/fontawesome.css",
-      "PackagePath": "staticwebassets/AdminLTE/docs/assets/plugins/fontawesome-free/css/fontawesome.css"
     },
     {
       "Id": "/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/wwwroot/AdminLTE/docs/assets/plugins/fontawesome-free/css/fontawesome.min.css",
@@ -951,14 +943,6 @@
     {
       "Id": "/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/wwwroot/AdminLTE/docs/assets/plugins/fontawesome-free/css/svg-with-js.min.css",
       "PackagePath": "staticwebassets/AdminLTE/docs/assets/plugins/fontawesome-free/css/svg-with-js.min.css"
-    },
-    {
-      "Id": "/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/wwwroot/AdminLTE/docs/assets/plugins/fontawesome-free/css/v4-shims.css",
-      "PackagePath": "staticwebassets/AdminLTE/docs/assets/plugins/fontawesome-free/css/v4-shims.css"
-    },
-    {
-      "Id": "/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/wwwroot/AdminLTE/docs/assets/plugins/fontawesome-free/css/v4-shims.min.css",
-      "PackagePath": "staticwebassets/AdminLTE/docs/assets/plugins/fontawesome-free/css/v4-shims.min.css"
     },
     {
       "Id": "/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/wwwroot/AdminLTE/docs/assets/plugins/fontawesome-free/webfonts/fa-brands-400.eot",
@@ -4637,10 +4621,6 @@
       "PackagePath": "staticwebassets/AdminLTE/plugins/flot/jquery.flot.js"
     },
     {
-      "Id": "/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/wwwroot/AdminLTE/plugins/fontawesome-free/css/all.css",
-      "PackagePath": "staticwebassets/AdminLTE/plugins/fontawesome-free/css/all.css"
-    },
-    {
       "Id": "/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/wwwroot/AdminLTE/plugins/fontawesome-free/css/all.min.css",
       "PackagePath": "staticwebassets/AdminLTE/plugins/fontawesome-free/css/all.min.css"
     },
@@ -4651,10 +4631,6 @@
     {
       "Id": "/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/wwwroot/AdminLTE/plugins/fontawesome-free/css/brands.min.css",
       "PackagePath": "staticwebassets/AdminLTE/plugins/fontawesome-free/css/brands.min.css"
-    },
-    {
-      "Id": "/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/wwwroot/AdminLTE/plugins/fontawesome-free/css/fontawesome.css",
-      "PackagePath": "staticwebassets/AdminLTE/plugins/fontawesome-free/css/fontawesome.css"
     },
     {
       "Id": "/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/wwwroot/AdminLTE/plugins/fontawesome-free/css/fontawesome.min.css",
@@ -4683,14 +4659,6 @@
     {
       "Id": "/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/wwwroot/AdminLTE/plugins/fontawesome-free/css/svg-with-js.min.css",
       "PackagePath": "staticwebassets/AdminLTE/plugins/fontawesome-free/css/svg-with-js.min.css"
-    },
-    {
-      "Id": "/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/wwwroot/AdminLTE/plugins/fontawesome-free/css/v4-shims.css",
-      "PackagePath": "staticwebassets/AdminLTE/plugins/fontawesome-free/css/v4-shims.css"
-    },
-    {
-      "Id": "/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/wwwroot/AdminLTE/plugins/fontawesome-free/css/v4-shims.min.css",
-      "PackagePath": "staticwebassets/AdminLTE/plugins/fontawesome-free/css/v4-shims.min.css"
     },
     {
       "Id": "/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/wwwroot/AdminLTE/plugins/fontawesome-free/webfonts/fa-brands-400.eot",
@@ -8973,12 +8941,20 @@
       "PackagePath": "staticwebassets/css/ThermalPrinting.css"
     },
     {
+      "Id": "/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/wwwroot/css/meta-theme.css",
+      "PackagePath": "staticwebassets/css/meta-theme.css"
+    },
+    {
       "Id": "/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/wwwroot/css/site.css",
       "PackagePath": "staticwebassets/css/site.css"
     },
     {
       "Id": "/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/wwwroot/favicon.ico",
       "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/wwwroot/images/29logo.png",
+      "PackagePath": "staticwebassets/images/29logo.png"
     },
     {
       "Id": "/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/wwwroot/images/AMS.png",
@@ -9537,6 +9513,10 @@
       "PackagePath": "staticwebassets/upload/6400f506-6ce5-4edf-9db7-8c2d82cd56ec_510825124_1140556964499869_9180358262263592423_n.jpg"
     },
     {
+      "Id": "/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/wwwroot/upload/8ebb1813-f70d-4305-83bb-b5485b8996f0_logo-confirm (1).png",
+      "PackagePath": "staticwebassets/upload/8ebb1813-f70d-4305-83bb-b5485b8996f0_logo-confirm (1).png"
+    },
+    {
       "Id": "/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/wwwroot/upload/93aa3dd2-4d96-48f0-ba9d-00f8f223a412_510020860_1140557041166528_9214328772488857603_n.jpg",
       "PackagePath": "staticwebassets/upload/93aa3dd2-4d96-48f0-ba9d-00f8f223a412_510020860_1140557041166528_9214328772488857603_n.jpg"
     },
@@ -9551,6 +9531,10 @@
     {
       "Id": "/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/wwwroot/upload/a63f55f0-5be8-4ba5-bf45-91d8ca185646_510825124_1140556964499869_9180358262263592423_n.jpg",
       "PackagePath": "staticwebassets/upload/a63f55f0-5be8-4ba5-bf45-91d8ca185646_510825124_1140556964499869_9180358262263592423_n.jpg"
+    },
+    {
+      "Id": "/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/wwwroot/upload/b2b87c1d-86ae-4821-b998-4356763ffb55_gold.png",
+      "PackagePath": "staticwebassets/upload/b2b87c1d-86ae-4821-b998-4356763ffb55_gold.png"
     },
     {
       "Id": "/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/wwwroot/upload/bd2251b0-c5ad-44eb-96d2-7fe8255bf4a9_510020860_1140557041166528_9214328772488857603_n.jpg",
@@ -9579,6 +9563,10 @@
     {
       "Id": "/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/wwwroot/upload/f0f595e8-3fad-4c61-b6e7-90ebc5ddaee7_510825124_1140556964499869_9180358262263592423_n.jpg",
       "PackagePath": "staticwebassets/upload/f0f595e8-3fad-4c61-b6e7-90ebc5ddaee7_510825124_1140556964499869_9180358262263592423_n.jpg"
+    },
+    {
+      "Id": "/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/wwwroot/upload/f2527fb7-361e-4a92-8ca8-0c3dadbe23ee_certificate.png",
+      "PackagePath": "staticwebassets/upload/f2527fb7-361e-4a92-8ca8-0c3dadbe23ee_certificate.png"
     },
     {
       "Id": "/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/wwwroot/upload/sample-logo.png",

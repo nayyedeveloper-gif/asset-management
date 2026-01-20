@@ -1,79 +1,204 @@
 ﻿@model AMS.Models.DashboardViewModel.SharedUIDataViewModel
 
-<aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <a href="@Url.Action("Index", "Dashboard")" class="brand-link luxury-brand">
-        <div class="brand-image-wrapper">
-            <div class="luxury-logo">
-                <i class="fas fa-gem"></i>
-            </div>
+<aside class="main-sidebar sidebar-light-primary elevation-1 meta-sidebar">
+    <a href="@Url.Action("Index", "Dashboard")" class="brand-link meta-brand">
+        <div class="brand-logo-container">
+            <img src="~/images/29logo.png" alt="29 Logo" class="brand-logo-img" />
         </div>
-        <div class="brand-text-wrapper">
-            <span class="brand-text-main">29 Gem & Jewellery</span>
-            <span class="brand-text-subtitle">Where Excellence Meets Elegance</span>
+        <div class="brand-text-container">
+            <span class="brand-text-main">29 Asset</span>
+            <span class="brand-text-sub">Management System</span>
         </div>
     </a>
 
     <style>
-    .luxury-brand {
-        background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
-        border-bottom: 2px solid #f59e0b;
-        padding: 20px 15px;
+    .meta-sidebar {
+        background: #ffffff !important;
+        border-right: 1px solid #e4e6eb !important;
+    }
+    
+    .meta-brand {
+        background: #ffffff;
+        border-bottom: 1px solid #e4e6eb;
+        padding: 16px 20px;
         text-decoration: none;
-        transition: all 0.3s ease;
-    }
-    
-    .luxury-brand:hover {
-        background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%);
-        transform: translateY(-2px);
-        box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3);
-    }
-    
-    .brand-image-wrapper {
         display: flex;
         align-items: center;
-        justify-content: center;
-        margin-bottom: 10px;
+        gap: 12px;
+        transition: all 0.2s ease;
     }
     
-    .luxury-logo {
+    .meta-brand:hover {
+        background: #f7f8fa;
+    }
+    
+    .brand-logo-container {
+        flex-shrink: 0;
+    }
+    
+    .brand-logo-img {
         width: 50px;
-        height: 50px;
-        background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
-        border-radius: 50%;
+        height: auto;
+        display: block;
+    }
+    
+    .brand-text-container {
         display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
-        border: 2px solid #fbbf24;
-    }
-    
-    .luxury-logo i {
-        font-size: 24px;
-        color: white;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-    }
-    
-    .brand-text-wrapper {
-        text-align: center;
+        flex-direction: column;
+        line-height: 1.2;
     }
     
     .brand-text-main {
-        display: block;
         font-size: 18px;
         font-weight: 700;
-        color: #f59e0b;
-        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-        letter-spacing: 1px;
+        color: #1c1e21;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    
+    .brand-text-sub {
+        font-size: 12px;
+        font-weight: 400;
+        color: #65676b;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+    
+    /* User Panel Styles */
+    .meta-sidebar .user-panel {
+        border-bottom: 1px solid #e4e6eb;
+        padding: 16px 20px;
+        background: #ffffff !important;
+    }
+    
+    .meta-sidebar .sidebar {
+        background: #ffffff !important;
+    }
+    
+    .meta-sidebar .user-panel .image img {
+        border: 2px solid #0866FF;
+    }
+    
+    .meta-sidebar .user-panel .info a {
+        color: #1c1e21;
+        font-weight: 600;
+        font-size: 14px;
+    }
+    
+    .meta-sidebar .user-panel .info a:hover {
+        color: #0866FF;
+    }
+    
+    /* Navigation Styles */
+    .meta-sidebar .nav-sidebar {
+        padding: 8px 0;
+    }
+    
+    .meta-sidebar .nav-sidebar .nav-item {
         margin-bottom: 2px;
     }
     
-    .brand-text-subtitle {
-        display: block;
-        font-size: 10px;
-        font-weight: 300;
-        color: #9ca3af;
-        letter-spacing: 0.5px;
-        font-style: italic;
+    .meta-sidebar .nav-sidebar .nav-link {
+        color: #1c1e21 !important;
+        padding: 10px 20px;
+        border-radius: 0;
+        font-size: 14px;
+        font-weight: 500;
+        transition: all 0.2s ease;
+        border-left: 3px solid transparent;
+        background: transparent !important;
+    }
+    
+    .meta-sidebar .nav-sidebar .nav-link p {
+        color: #1c1e21 !important;
+        margin: 0;
+    }
+    
+    .meta-sidebar .nav-sidebar .nav-link:hover {
+        background: #f0f2f5 !important;
+        color: #0866FF !important;
+        border-left-color: #0866FF;
+    }
+    
+    .meta-sidebar .nav-sidebar .nav-link:hover p {
+        color: #0866FF !important;
+    }
+    
+    .meta-sidebar .nav-sidebar .nav-link.active {
+        background: #e7f3ff !important;
+        color: #0866FF !important;
+        border-left-color: #0866FF;
+        font-weight: 600;
+    }
+    
+    .meta-sidebar .nav-sidebar .nav-link.active p {
+        color: #0866FF !important;
+    }
+    
+    .meta-sidebar .nav-sidebar .nav-link .nav-icon {
+        color: #65676b;
+        margin-right: 12px;
+        font-size: 16px;
+        width: 20px;
+        text-align: center;
+    }
+    
+    .meta-sidebar .nav-sidebar .nav-link:hover .nav-icon,
+    .meta-sidebar .nav-sidebar .nav-link.active .nav-icon {
+        color: #0866FF;
+    }
+    
+    /* Tree View Styles */
+    .meta-sidebar .nav-treeview {
+        background: #f7f8fa;
+        padding: 4px 0;
+    }
+    
+    .meta-sidebar .nav-treeview .nav-link {
+        padding: 8px 20px 8px 52px;
+        font-size: 13px;
+        font-weight: 400;
+    }
+    
+    .meta-sidebar .nav-treeview .nav-link .nav-icon {
+        font-size: 14px;
+        margin-right: 10px;
+    }
+    
+    /* Menu Open State */
+    .meta-sidebar .nav-item.menu-open > .nav-link {
+        background: #f0f2f5 !important;
+        color: #0866FF;
+    }
+    
+    .meta-sidebar .nav-item.menu-open > .nav-link .nav-icon {
+        color: #0866FF;
+    }
+    
+    /* Right Arrow for Treeview */
+    .meta-sidebar .nav-sidebar .nav-link .right {
+        color: #65676b;
+    }
+    
+    .meta-sidebar .nav-sidebar .nav-link:hover .right,
+    .meta-sidebar .nav-sidebar .nav-link.active .right {
+        color: #0866FF;
+    }
+    
+    /* Scrollbar Styling */
+    .meta-sidebar .sidebar::-webkit-scrollbar {
+        width: 6px;
+    }
+    
+    .meta-sidebar .sidebar::-webkit-scrollbar-track {
+        background: #f7f8fa;
+    }
+    
+    .meta-sidebar .sidebar::-webkit-scrollbar-thumb {
+        background: #ccd0d5;
+        border-radius: 3px;
+    }
+    
+    .meta-sidebar .sidebar::-webkit-scrollbar-thumb:hover {
+        background: #b0b3b8;
     }
     </style>
 
@@ -193,8 +318,8 @@
                 @if (Model.MainMenuViewModel.PrintQRcode)
                 {
                     <li class="nav-item">
-                        <a href="@MainMenu.PrintQRcode.Path" style="background-color: #b28c7e" class="nav-link active">
-                            <i class="nav-icon fas fa-box"></i>
+                        <a href="@MainMenu.PrintQRcode.Path" class="nav-link active">
+                            <i class="nav-icon fas fa-qrcode"></i>
                             <p>
                                 @MainMenu.PrintQRcode.PageName
                                 <span class="right"></span>
@@ -250,8 +375,8 @@
                 @if (Model.MainMenuViewModel.RequestModule)
                 {
                     <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link active" style="background-color: #b28c7e">
-                            <i class="nav-icon fas fa-user-shield"></i>
+                        <a href="#" class="nav-link active">
+                            <i class="nav-icon fas fa-clipboard-list"></i>
                             <p>
                                 Request Module
                                 <i class="right fas fa-angle-left"></i>
@@ -370,8 +495,8 @@
                 @if (Model.MainMenuViewModel.ManageUserRoles)
                 {
                     <li class="nav-item has-treeview">
-                        <a href="#" class="nav-link active" style="background-color: #b28c7e">
-                            <i class="nav-icon fas fa-user-clock"></i>
+                        <a href="#" class="nav-link active">
+                            <i class="nav-icon fas fa-user-shield"></i>
                             <p>
                                 Manage User Role
                                 <i class="right fas fa-angle-left"></i>

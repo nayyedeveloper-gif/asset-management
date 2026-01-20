@@ -62,7 +62,7 @@
                     <div class="asset-meta">
                         <div class="asset-price">
                             <span class="price-label">Value</span>
-                            <span class="price-value">$@asset.UnitPrice.ToString()</span>
+                            <span class="price-value">@string.Format("{0:N0}", asset.UnitPrice) Ks</span>
                         </div>
                         <div class="asset-date">
                             <span class="date-label">Added</span>

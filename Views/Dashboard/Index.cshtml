@@ -6,22 +6,15 @@
         var _IsInRole = User.IsInRole("Admin");
         if (_IsInRole)
         {
-            <!-- Modern Header Section -->
-            <div class="dashboard-header-section">
+            <!-- Meta-Inspired Header Section -->
+            <div class="meta-dashboard-header">
                 <div class="header-content">
-                    <div class="header-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <div class="header-text">
-                        <h1 class="header-title">Asset Management Dashboard</h1>
-                        <p class="header-subtitle">29 Gem & Jewellery - System Overview</p>
-                    </div>
+                    <h1 class="header-title">Dashboard</h1>
+                    <p class="header-subtitle">Welcome back! Here's what's happening with your assets today.</p>
                 </div>
-                <div class="header-stats">
-                    <div class="stat-item">
-                        <i class="fas fa-clock"></i>
-                        <span>@DateTime.Now.ToString("dd MMM yyyy")</span>
-                    </div>
+                <div class="header-date">
+                    <i class="far fa-calendar"></i>
+                    <span>@DateTime.Now.ToString("MMMM dd, yyyy")</span>
                 </div>
             </div>
 
@@ -55,109 +48,67 @@
 </div>
 
 <style>
-/* Modern Dashboard Container */
+/* Meta-Inspired Dashboard Container */
 .dashboard-container {
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    background: #f0f2f5;
     min-height: 100vh;
-    padding: 24px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
-/* Modern Header Section */
-.dashboard-header-section {
-    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-    border-radius: 16px;
-    padding: 32px;
-    margin-bottom: 32px;
+/* Meta-Inspired Header Section */
+.meta-dashboard-header {
+    background: white;
+    padding: 24px 32px;
+    margin-bottom: 24px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
-}
-
-.dashboard-header-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 200px;
-    height: 100%;
-    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.1) 50%, transparent 70%);
-    transform: skewX(-15deg);
+    border-bottom: 1px solid #e4e6eb;
 }
 
 .header-content {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    z-index: 1;
-    position: relative;
-}
-
-.header-icon {
-    width: 64px;
-    height: 64px;
-    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
-    border-radius: 16px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 28px;
-    color: white;
-    box-shadow: 0 4px 16px rgba(59, 130, 246, 0.3);
-}
-
-.header-text {
     flex: 1;
 }
 
 .header-title {
-    color: white;
-    font-size: 2.25rem;
+    color: #1c1e21;
+    font-size: 24px;
     font-weight: 700;
-    margin: 0 0 8px 0;
-    letter-spacing: -0.025em;
+    margin: 0 0 4px 0;
     line-height: 1.2;
 }
 
 .header-subtitle {
-    color: #cbd5e1;
-    font-size: 1.125rem;
+    color: #65676b;
+    font-size: 14px;
     margin: 0;
-    opacity: 0.9;
     font-weight: 400;
 }
 
-.header-stats {
-    display: flex;
-    gap: 16px;
-    z-index: 1;
-    position: relative;
-}
-
-.stat-item {
+.header-date {
     display: flex;
     align-items: center;
     gap: 8px;
-    color: #cbd5e1;
-    font-size: 0.875rem;
+    color: #65676b;
+    font-size: 14px;
     font-weight: 500;
+    padding: 8px 16px;
+    background: #f0f2f5;
+    border-radius: 6px;
 }
 
-.stat-item i {
-    color: #3b82f6;
-    font-size: 1rem;
+.header-date i {
+    color: #0866FF;
+    font-size: 16px;
 }
 
 /* Dashboard Grid Layout */
 .dashboard-grid {
     display: grid;
     grid-template-columns: 1fr;
-    gap: 24px;
-    max-width: 1400px;
-    margin: 0 auto;
+    gap: 20px;
+    padding: 0 32px 32px 32px;
 }
 
 .stats-section {
@@ -176,16 +127,15 @@
 
 .content-card {
     background: white;
-    border-radius: 16px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
     overflow: hidden;
-    transition: all 0.3s ease;
-    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+    border: 1px solid #e4e6eb;
 }
 
 .content-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.1), 0 4px 8px -2px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .chart-section {
@@ -196,38 +146,37 @@
     grid-column: 1 / -1;
 }
 
-/* Modern Card Styling */
+/* Meta Card Styling */
 .card {
     background: white;
-    border-radius: 16px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
     margin-bottom: 0;
     overflow: hidden;
-    transition: all 0.3s ease;
-    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+    border: 1px solid #e4e6eb;
     height: 100%;
 }
 
 .card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.1), 0 4px 8px -2px rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
 .card-header {
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-    color: #1e293b;
-    padding: 24px;
-    border-bottom: 1px solid #e2e8f0;
+    background: white;
+    color: #1c1e21;
+    padding: 16px 20px;
+    border-bottom: 1px solid #e4e6eb;
     font-weight: 600;
-    font-size: 1.125rem;
+    font-size: 16px;
     display: flex;
     align-items: center;
-    gap: 12px;
+    gap: 10px;
 }
 
 .card-header i {
-    color: #3b82f6;
-    font-size: 1.25rem;
+    color: #0866FF;
+    font-size: 18px;
 }
 
 .card-title {
@@ -238,12 +187,14 @@
 }
 
 .card-body {
-    padding: 24px;
+    padding: 20px;
 }
 
 /* Modern Info Box Styling */
 .info-box {
     background: white;
+    border-radius: 8px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
     border-radius: 16px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
     margin-bottom: 24px;

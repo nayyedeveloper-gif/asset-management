@@ -52,6 +52,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Gb3Jnb3RQYXNzd29yZENvbmZpcm1hdGlvbi5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/Views/Account/ForgotPassword_Old.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Gb3Jnb3RQYXNzd29yZF9PbGQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/Views/Account/Lockout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9Mb2Nrb3V0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -70,6 +74,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/Views/Account/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9SZWdpc3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/Views/Account/Register_Old.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWNjb3VudC9SZWdpc3Rlcl9PbGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/Views/Account/ResetPassword.cshtml]
@@ -252,8 +260,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGFzaGJvYXJkL19Bc3NldFN1bW1hcnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/Views/Dashboard/_AssetSummary_Old.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGFzaGJvYXJkL19Bc3NldFN1bW1hcnlfT2xkLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/Views/Dashboard/_PieChart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGFzaGJvYXJkL19QaWVDaGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/Views/Dashboard/_PieChart_Old.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvRGFzaGJvYXJkL19QaWVDaGFydF9PbGQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/Views/Dashboard/_RecentRegisteredAsset.cshtml]

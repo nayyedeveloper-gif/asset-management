@@ -32,7 +32,7 @@ string _GetConnStringName = ControllerExtensions.GetConnectionString(builder.Con
 // Add DbContext
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
-    var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
+    var connectionString = _GetConnStringName;
     
     // Check if it's PostgreSQL connection
     if (connectionString.Contains("Host=") || connectionString.Contains("Server=") && connectionString.Contains("Port="))

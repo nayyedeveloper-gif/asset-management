@@ -1,0 +1,707 @@
+﻿@model AMS.Models.DashboardViewModel.PieChartViewModel
+
+<div class="pie-chart-section">
+    <!-- Modern Section Header -->
+    <div class="section-header">
+        <div class="section-title">
+            <i class="fas fa-chart-pie"></i>
+            <h3>Asset Distribution</h3>
+        </div>
+        <div class="section-subtitle">
+            <p>Visual breakdown of asset categories and status</p>
+        </div>
+    </div>
+
+    <!-- Modern Chart Container -->
+    <div class="chart-container">
+        <div class="chart-wrapper">
+            <div id="assetPieChart" class="pie-chart"></div>
+        </div>
+        
+        <!-- Modern Chart Legend -->
+        <div class="chart-legend">
+            <div class="legend-title">
+                <i class="fas fa-list"></i>
+                <span>Categories</span>
+            </div>
+            <div class="legend-items" id="chartLegend">
+                <!-- Dynamic legend items will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Modern Chart Actions -->
+    <div class="chart-actions">
+        <div class="action-item">
+            <button class="action-btn refresh-btn" onclick="refreshChart()" title="Refresh Chart">
+                <i class="fas fa-sync-alt"></i>
+                <span>Refresh</span>
+            </button>
+        </div>
+        <div class="action-item">
+            <button class="action-btn export-btn" onclick="exportChart()" title="Export Chart">
+                <i class="fas fa-download"></i>
+                <span>Export</span>
+            </button>
+        </div>
+        <div class="action-item">
+            <button class="action-btn fullscreen-btn" onclick="toggleFullscreen()" title="Fullscreen">
+                <i class="fas fa-expand"></i>
+                <span>Fullscreen</span>
+            </button>
+        </div>
+    </div>
+</div>
+
+<style>
+/* Modern Pie Chart Section */
+.pie-chart-section {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    border: 1px solid #e2e8f0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Modern Section Header */
+.section-header {
+    margin-bottom: 24px;
+    text-align: center;
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.section-title i {
+    font-size: 1.5rem;
+    color: #3b82f6;
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(59, 130, 246, 0.2);
+}
+
+.section-title h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1e293b;
+    margin: 0;
+    letter-spacing: -0.025em;
+}
+
+.section-subtitle p {
+    color: #64748b;
+    font-size: 0.875rem;
+    margin: 0;
+    font-weight: 400;
+}
+
+/* Modern Chart Container */
+.chart-container {
+    flex: 1;
+    display: flex;
+    gap: 24px;
+    margin-bottom: 20px;
+}
+
+.chart-wrapper {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    position: relative;
+    overflow: hidden;
+}
+
+.chart-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, transparent 30%, rgba(59, 130, 246, 0.05) 50%, transparent 70%);
+    pointer-events: none;
+}
+
+.pie-chart {
+    width: 100%;
+    height: 100%;
+    min-height: 280px;
+    position: relative;
+    z-index: 1;
+}
+
+/* Modern Chart Legend */
+.chart-legend {
+    width: 280px;
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border: 1px solid #e2e8f0;
+    flex-shrink: 0;
+}
+
+.legend-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.legend-title i {
+    color: #3b82f6;
+    font-size: 1rem;
+}
+
+.legend-title span {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #374151;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.legend-items {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.legend-item:hover {
+    background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+    transform: translateX(4px);
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    flex-shrink: 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.legend-text {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.legend-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    line-height: 1.3;
+}
+
+.legend-value {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #64748b;
+    font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+}
+
+/* Modern Chart Actions */
+.chart-actions {
+    display: flex;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.action-item {
+    flex: 1;
+}
+
+.action-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 16px;
+    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    color: #374151;
+    font-weight: 600;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.action-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px -4px rgba(0, 0, 0, 0.1);
+    color: #3b82f6;
+}
+
+.action-btn i {
+    font-size: 0.875rem;
+    color: #3b82f6;
+    transition: all 0.3s ease;
+}
+
+.action-btn:hover i {
+    transform: scale(1.1);
+}
+
+.refresh-btn:hover {
+    background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+    border-color: #86efac;
+    color: #166534;
+}
+
+.refresh-btn:hover i {
+    color: #166534;
+}
+
+.export-btn:hover {
+    background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+    border-color: #60a5fa;
+    color: #1e40af;
+}
+
+.export-btn:hover i {
+    color: #1e40af;
+}
+
+.fullscreen-btn:hover {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-color: #fbbf24;
+    color: #92400e;
+}
+
+.fullscreen-btn:hover i {
+    color: #92400e;
+}
+
+/* Modern Responsive Design */
+@@media (max-width: 1200px) {
+    .chart-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .chart-legend {
+        width: 100%;
+    }
+    
+    .legend-items {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+    
+    .legend-item {
+        flex: 1;
+        min-width: 200px;
+    }
+}
+
+@@media (max-width: 768px) {
+    .pie-chart-section {
+        padding: 20px;
+    }
+    
+    .section-title {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .section-title h3 {
+        font-size: 1.125rem;
+    }
+    
+    .section-subtitle p {
+        font-size: 0.8rem;
+    }
+    
+    .chart-wrapper {
+        min-height: 250px;
+    }
+    
+    .pie-chart {
+        min-height: 230px;
+    }
+    
+    .chart-legend {
+        padding: 16px;
+    }
+    
+    .legend-items {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .legend-item {
+        min-width: auto;
+    }
+    
+    .chart-actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .action-btn {
+        padding: 10px 14px;
+        font-size: 0.75rem;
+    }
+}
+
+@@media (max-width: 480px) {
+    .pie-chart-section {
+        padding: 16px;
+    }
+    
+    .chart-wrapper {
+        min-height: 200px;
+    }
+    
+    .pie-chart {
+        min-height: 180px;
+    }
+    
+    .chart-legend {
+        padding: 12px;
+    }
+    
+    .legend-title {
+        margin-bottom: 12px;
+    }
+    
+    .legend-item {
+        padding: 6px;
+    }
+    
+    .legend-label {
+        font-size: 0.8rem;
+    }
+    
+    .legend-value {
+        font-size: 0.7rem;
+    }
+}
+
+/* Modern Loading States */
+.chart-wrapper.loading {
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.chart-wrapper.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 32px;
+    height: 32px;
+    margin: -16px 0 0 -16px;
+    border: 3px solid #f3f4f6;
+    border-top: 3px solid #3b82f6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    z-index: 2;
+}
+
+@@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Modern Animations */
+@@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.pie-chart-section {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Modern Chart Tooltips */
+.highcharts-tooltip {
+    background: rgba(30, 41, 59, 0.95) !important;
+    border: none !important;
+    border-radius: 8px !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2) !important;
+    color: white !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+    font-size: 0.875rem !important;
+    padding: 12px 16px !important;
+    backdrop-filter: blur(8px) !important;
+}
+
+.highcharts-tooltip span {
+    color: #cbd5e1 !important;
+    font-weight: 400 !important;
+}
+
+/* Modern Chart Legend Hover Effects */
+.legend-item:hover .legend-color {
+    transform: scale(1.2);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.legend-item:hover .legend-label {
+    color: #1e293b;
+    font-weight: 600;
+}
+
+.legend-item:hover .legend-value {
+    color: #374151;
+}
+</style>
+
+<script>
+// Chart colors for different categories
+const chartColors = [
+    '#3b82f6', '#f59e0b', '#ef4444', '#0ea5e9', '#10b981', 
+    '#8b5cf6', '#f97316', '#06b6d4', '#84cc16', '#ec4899'
+];
+
+// Load asset distribution data
+async function loadAssetDistributionData() {
+    try {
+        // Load multiple breakdown data
+        const [allocationData, statusData, categoryData, issuesData] = await Promise.all([
+            fetch('/Dashboard/GetAssetAllocationBreakdown').then(r => r.json()),
+            fetch('/Dashboard/GetAssetStatusBreakdown').then(r => r.json()),
+            fetch('/Dashboard/GetAssetCategoryBreakdown').then(r => r.json()),
+            fetch('/Dashboard/GetAssetIssuesBreakdown').then(r => r.json())
+        ]);
+
+        // Combine data for pie chart
+        const chartData = [];
+        const legendItems = [];
+
+        // Add allocation data
+        allocationData.forEach((item, index) => {
+            chartData.push({
+                name: item.Label,
+                value: item.Count,
+                color: chartColors[index]
+            });
+            legendItems.push({
+                label: item.Label,
+                value: item.Count,
+                color: chartColors[index]
+            });
+        });
+
+        // Add status data (if not already included)
+        statusData.forEach((item, index) => {
+            const existingIndex = chartData.findIndex(d => d.name === item.Status);
+            if (existingIndex === -1) {
+                chartData.push({
+                    name: item.Status,
+                    value: item.Count,
+                    color: chartColors[chartData.length % chartColors.length]
+                });
+                legendItems.push({
+                    label: item.Status,
+                    value: item.Count,
+                    color: chartColors[chartData.length % chartColors.length]
+                });
+            }
+        });
+
+        // Render chart
+        renderPieChart(chartData);
+        renderLegend(legendItems);
+
+    } catch (error) {
+        console.error('Error loading asset distribution data:', error);
+        // Show fallback data
+        showFallbackData();
+    }
+}
+
+// Render pie chart
+function renderPieChart(data) {
+    const chartContainer = document.getElementById('assetPieChart');
+    if (!chartContainer) return;
+
+    // Clear existing content
+    chartContainer.innerHTML = '';
+
+    // Create SVG for pie chart
+    const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+    svg.setAttribute('width', '100%');
+    svg.setAttribute('height', '100%');
+    svg.setAttribute('viewBox', '0 0 300 300');
+
+    const centerX = 150;
+    const centerY = 150;
+    const radius = 120;
+
+    let currentAngle = 0;
+    const total = data.reduce((sum, item) => sum + item.value, 0);
+
+    data.forEach((item, index) => {
+        if (item.value > 0) {
+            const sliceAngle = (item.value / total) * 2 * Math.PI;
+            const startAngle = currentAngle;
+            const endAngle = currentAngle + sliceAngle;
+
+            // Create pie slice
+            const x1 = centerX + radius * Math.cos(startAngle);
+            const y1 = centerY + radius * Math.sin(startAngle);
+            const x2 = centerX + radius * Math.cos(endAngle);
+            const y2 = centerY + radius * Math.sin(endAngle);
+
+            const largeArcFlag = sliceAngle > Math.PI ? 1 : 0;
+
+            const pathData = [
+                `M ${centerX} ${centerY}`,
+                `L ${x1} ${y1}`,
+                `A ${radius} ${radius} 0 ${largeArcFlag} 1 ${x2} ${y2}`,
+                'Z'
+            ].join(' ');
+
+            const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+            path.setAttribute('d', pathData);
+            path.setAttribute('fill', item.color);
+            path.setAttribute('stroke', '#fff');
+            path.setAttribute('stroke-width', '2');
+            path.style.cursor = 'pointer';
+            path.setAttribute('data-name', item.name);
+            path.setAttribute('data-value', item.value);
+
+            // Add hover effect
+            path.addEventListener('mouseenter', function() {
+                this.style.opacity = '0.8';
+                this.style.transform = 'scale(1.05)';
+            });
+
+            path.addEventListener('mouseleave', function() {
+                this.style.opacity = '1';
+                this.style.transform = 'scale(1)';
+            });
+
+            svg.appendChild(path);
+            currentAngle = endAngle;
+        }
+    });
+
+    // Add center text
+    const centerText = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+    centerText.setAttribute('x', centerX);
+    centerText.setAttribute('y', centerY);
+    centerText.setAttribute('text-anchor', 'middle');
+    centerText.setAttribute('dominant-baseline', 'middle');
+    centerText.setAttribute('font-size', '14');
+    centerText.setAttribute('font-weight', 'bold');
+    centerText.setAttribute('fill', '#374151');
+    centerText.textContent = `${total} Assets`;
+
+    svg.appendChild(centerText);
+    chartContainer.appendChild(svg);
+}
+
+// Render legend
+function renderLegend(items) {
+    const legendContainer = document.getElementById('chartLegend');
+    if (!legendContainer) return;
+
+    legendContainer.innerHTML = '';
+
+    items.forEach(item => {
+        if (item.value > 0) {
+            const legendItem = document.createElement('div');
+            legendItem.className = 'legend-item';
+            legendItem.innerHTML = `
+                <div class="legend-color" style="background: ${item.color};"></div>
+                <div class="legend-text">
+                    <span class="legend-label">${item.label}</span>
+                    <span class="legend-value">${item.value}</span>
+                </div>
+            `;
+            legendContainer.appendChild(legendItem);
+        }
+    });
+}
+
+// Show fallback data when API fails
+function showFallbackData() {
+    const fallbackData = [
+        { name: 'Allocated Assets', value: 8, color: '#3b82f6' },
+        { name: 'Unallocated Assets', value: 3, color: '#f59e0b' },
+        { name: 'Asset Issues', value: 2, color: '#ef4444' },
+        { name: 'Under Maintenance', value: 1, color: '#0ea5e9' }
+    ];
+
+    renderPieChart(fallbackData);
+    renderLegend(fallbackData.map(item => ({
+        label: item.name,
+        value: item.value,
+        color: item.color
+    })));
+}
+
+// Refresh chart
+function refreshChart() {
+    const refreshBtn = document.querySelector('.refresh-btn');
+    refreshBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i><span>Loading...</span>';
+    
+    loadAssetDistributionData().finally(() => {
+        refreshBtn.innerHTML = '<i class="fas fa-sync-alt"></i><span>Refresh</span>';
+    });
+}
+
+// Export chart
+function exportChart() {
+    // Implementation for chart export
+    alert('Chart export functionality will be implemented here');
+}
+
+// Toggle fullscreen
+function toggleFullscreen() {
+    const chartSection = document.querySelector('.pie-chart-section');
+    if (chartSection.requestFullscreen) {
+        chartSection.requestFullscreen();
+    }
+}
+
+// Load data when page loads
+document.addEventListener('DOMContentLoaded', function() {
+    loadAssetDistributionData();
+});
+
+// Auto-refresh every 30 seconds
+setInterval(loadAssetDistributionData, 30000);
+</script>
+

@@ -3870,24 +3870,6 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AdminLTE\docs\assets\plugins\bootstrap\js\bootstrap.min.js.map'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AdminLTE\docs\assets\plugins\fontawesome-free\css\all.css'))">
-      <SourceType>Package</SourceType>
-      <SourceId>AMS</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/AMS</BasePath>
-      <RelativePath>AdminLTE/docs/assets/plugins/fontawesome-free/css/all.css</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>d5djdh18s5</Fingerprint>
-      <Integrity>rxV/i+vP9deOyth3rBx+BnH5L7eKJExifrMtRJ0A4PI=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AdminLTE\docs\assets\plugins\fontawesome-free\css\all.css'))</OriginalItemSpec>
-    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AdminLTE\docs\assets\plugins\fontawesome-free\css\all.min.css'))">
       <SourceType>Package</SourceType>
       <SourceId>AMS</SourceId>
@@ -3941,24 +3923,6 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AdminLTE\docs\assets\plugins\fontawesome-free\css\brands.min.css'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AdminLTE\docs\assets\plugins\fontawesome-free\css\fontawesome.css'))">
-      <SourceType>Package</SourceType>
-      <SourceId>AMS</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/AMS</BasePath>
-      <RelativePath>AdminLTE/docs/assets/plugins/fontawesome-free/css/fontawesome.css</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>tiixfvlxa6</Fingerprint>
-      <Integrity>BbcWurmuedwufkDsEFEDQ/+BUmjiDwAya0WaKNczZcY=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AdminLTE\docs\assets\plugins\fontawesome-free\css\fontawesome.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AdminLTE\docs\assets\plugins\fontawesome-free\css\fontawesome.min.css'))">
       <SourceType>Package</SourceType>
@@ -4085,42 +4049,6 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AdminLTE\docs\assets\plugins\fontawesome-free\css\svg-with-js.min.css'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AdminLTE\docs\assets\plugins\fontawesome-free\css\v4-shims.css'))">
-      <SourceType>Package</SourceType>
-      <SourceId>AMS</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/AMS</BasePath>
-      <RelativePath>AdminLTE/docs/assets/plugins/fontawesome-free/css/v4-shims.css</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ohgcje13t0</Fingerprint>
-      <Integrity>hGakvVUJ2ufO/Ty+9D2o5pRXLPVVupB8NWyrOYv5vJ4=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AdminLTE\docs\assets\plugins\fontawesome-free\css\v4-shims.css'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AdminLTE\docs\assets\plugins\fontawesome-free\css\v4-shims.min.css'))">
-      <SourceType>Package</SourceType>
-      <SourceId>AMS</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/AMS</BasePath>
-      <RelativePath>AdminLTE/docs/assets/plugins/fontawesome-free/css/v4-shims.min.css</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>devq2rv71h</Fingerprint>
-      <Integrity>i6B+PKvguv+GJespCZdmRw1RUMs3FSuAwPuXYSHJ56E=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AdminLTE\docs\assets\plugins\fontawesome-free\css\v4-shims.min.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AdminLTE\docs\assets\plugins\fontawesome-free\webfonts\fa-brands-400.eot'))">
       <SourceType>Package</SourceType>
@@ -20862,24 +20790,6 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AdminLTE\plugins\flot\jquery.flot.js'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AdminLTE\plugins\fontawesome-free\css\all.css'))">
-      <SourceType>Package</SourceType>
-      <SourceId>AMS</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/AMS</BasePath>
-      <RelativePath>AdminLTE/plugins/fontawesome-free/css/all.css</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>d5djdh18s5</Fingerprint>
-      <Integrity>rxV/i+vP9deOyth3rBx+BnH5L7eKJExifrMtRJ0A4PI=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AdminLTE\plugins\fontawesome-free\css\all.css'))</OriginalItemSpec>
-    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AdminLTE\plugins\fontawesome-free\css\all.min.css'))">
       <SourceType>Package</SourceType>
       <SourceId>AMS</SourceId>
@@ -20933,24 +20843,6 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AdminLTE\plugins\fontawesome-free\css\brands.min.css'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AdminLTE\plugins\fontawesome-free\css\fontawesome.css'))">
-      <SourceType>Package</SourceType>
-      <SourceId>AMS</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/AMS</BasePath>
-      <RelativePath>AdminLTE/plugins/fontawesome-free/css/fontawesome.css</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>tiixfvlxa6</Fingerprint>
-      <Integrity>BbcWurmuedwufkDsEFEDQ/+BUmjiDwAya0WaKNczZcY=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AdminLTE\plugins\fontawesome-free\css\fontawesome.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AdminLTE\plugins\fontawesome-free\css\fontawesome.min.css'))">
       <SourceType>Package</SourceType>
@@ -21077,42 +20969,6 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AdminLTE\plugins\fontawesome-free\css\svg-with-js.min.css'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AdminLTE\plugins\fontawesome-free\css\v4-shims.css'))">
-      <SourceType>Package</SourceType>
-      <SourceId>AMS</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/AMS</BasePath>
-      <RelativePath>AdminLTE/plugins/fontawesome-free/css/v4-shims.css</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ohgcje13t0</Fingerprint>
-      <Integrity>hGakvVUJ2ufO/Ty+9D2o5pRXLPVVupB8NWyrOYv5vJ4=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AdminLTE\plugins\fontawesome-free\css\v4-shims.css'))</OriginalItemSpec>
-    </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AdminLTE\plugins\fontawesome-free\css\v4-shims.min.css'))">
-      <SourceType>Package</SourceType>
-      <SourceId>AMS</SourceId>
-      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
-      <BasePath>_content/AMS</BasePath>
-      <RelativePath>AdminLTE/plugins/fontawesome-free/css/v4-shims.min.css</RelativePath>
-      <AssetKind>All</AssetKind>
-      <AssetMode>All</AssetMode>
-      <AssetRole>Primary</AssetRole>
-      <RelatedAsset></RelatedAsset>
-      <AssetTraitName></AssetTraitName>
-      <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>devq2rv71h</Fingerprint>
-      <Integrity>i6B+PKvguv+GJespCZdmRw1RUMs3FSuAwPuXYSHJ56E=</Integrity>
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AdminLTE\plugins\fontawesome-free\css\v4-shims.min.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\AdminLTE\plugins\fontawesome-free\webfonts\fa-brands-400.eot'))">
       <SourceType>Package</SourceType>
@@ -38988,6 +38844,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\LoginUIDev.css'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\meta-theme.css'))">
+      <SourceType>Package</SourceType>
+      <SourceId>AMS</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AMS</BasePath>
+      <RelativePath>css/meta-theme.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>pojvbx3ng4</Fingerprint>
+      <Integrity>l4sr1Ec+ac/29UtxHXEH9y/qlX9AyCOoeTdvCRtyhrU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\meta-theme.css'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))">
       <SourceType>Package</SourceType>
       <SourceId>AMS</SourceId>
@@ -39000,8 +38874,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>5h8xarma2i</Fingerprint>
-      <Integrity>KR8ryKAHVPdfcNyDNpdls6lVCeqzhQW7HXHYvRcWRf4=</Integrity>
+      <Fingerprint>krslv8sfru</Fingerprint>
+      <Integrity>4KP9go9vCfEqgymmTArmco9g+0xK5SaQQDCJ+cloaaQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</OriginalItemSpec>
@@ -40409,6 +40283,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\29logo.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>AMS</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AMS</BasePath>
+      <RelativePath>images/29logo.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>59h7uf0vmx</Fingerprint>
+      <Integrity>53LmGxjypp+3bs1FGvDBN5nuGXzpW5pMUb+sTlFTLe0=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\29logo.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\AMS.png'))">
       <SourceType>Package</SourceType>
@@ -42912,6 +42804,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\upload\6400f506-6ce5-4edf-9db7-8c2d82cd56ec_510825124_1140556964499869_9180358262263592423_n.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\upload\8ebb1813-f70d-4305-83bb-b5485b8996f0_logo-confirm (1).png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>AMS</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AMS</BasePath>
+      <RelativePath>upload/8ebb1813-f70d-4305-83bb-b5485b8996f0_logo-confirm (1).png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>fah9n5jmmx</Fingerprint>
+      <Integrity>OeVkfd6GSND2lz/As90D+GRR3Wb8H7E/2g+YkpMNIJs=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\upload\8ebb1813-f70d-4305-83bb-b5485b8996f0_logo-confirm (1).png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\upload\93aa3dd2-4d96-48f0-ba9d-00f8f223a412_510020860_1140557041166528_9214328772488857603_n.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>AMS</SourceId>
@@ -42983,6 +42893,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\upload\a63f55f0-5be8-4ba5-bf45-91d8ca185646_510825124_1140556964499869_9180358262263592423_n.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\upload\b2b87c1d-86ae-4821-b998-4356763ffb55_gold.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>AMS</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AMS</BasePath>
+      <RelativePath>upload/b2b87c1d-86ae-4821-b998-4356763ffb55_gold.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ea6vatkrq5</Fingerprint>
+      <Integrity>lg8H6DIjsdcVOKMMyB9aaydE5FEUGtXACsQnZMhH97M=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\upload\b2b87c1d-86ae-4821-b998-4356763ffb55_gold.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\upload\bd2251b0-c5ad-44eb-96d2-7fe8255bf4a9_510020860_1140557041166528_9214328772488857603_n.jpg'))">
       <SourceType>Package</SourceType>
@@ -43109,6 +43037,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\upload\f0f595e8-3fad-4c61-b6e7-90ebc5ddaee7_510825124_1140556964499869_9180358262263592423_n.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\upload\f2527fb7-361e-4a92-8ca8-0c3dadbe23ee_certificate.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>AMS</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/AMS</BasePath>
+      <RelativePath>upload/f2527fb7-361e-4a92-8ca8-0c3dadbe23ee_certificate.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>pso3r8tcrb</Fingerprint>
+      <Integrity>t3Tt/99Crufb4j1bhDPaP1X3LSNLqKd9YxkCH0b46WI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\upload\f2527fb7-361e-4a92-8ca8-0c3dadbe23ee_certificate.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\upload\sample-logo.png'))">
       <SourceType>Package</SourceType>

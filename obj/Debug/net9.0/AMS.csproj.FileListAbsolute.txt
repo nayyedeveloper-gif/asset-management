@@ -664,11 +664,9 @@
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/yv7061esuf-pv6djvlbui.gz
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/1od0ey0qwg-53kkc7mhg9.gz
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/c7dswvm74y-1iand3os7l.gz
-/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/yo7wvitt00-d5djdh18s5.gz
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/2rq185pi31-xyytbyd0pi.gz
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/g1a4yk4u6i-iw90lpb2eo.gz
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/fvl3fcs38v-12fderrbxl.gz
-/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/6hmt4ldebk-tiixfvlxa6.gz
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/28013szr3h-rk9ec66qef.gz
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/15w9blvgg5-9fil0umztb.gz
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/lv9co8jv3p-2g6ogqqlfd.gz
@@ -676,8 +674,6 @@
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/axue28v2oo-ch6ymde95o.gz
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/n3a273l8xw-hrc9fkfv9c.gz
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/xk7u4t8exr-drd1b2dhrc.gz
-/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/nothri5bmk-ohgcje13t0.gz
-/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/wnb97sv1ci-devq2rv71h.gz
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/ms501ly56t-waxs344vxl.gz
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/1f182x7jr1-qgw1r6r2me.gz
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/uplwp95q3p-mlm8u9cngp.gz
@@ -1505,11 +1501,9 @@
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/bkhary79iw-8sx4i9x4z9.gz
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/08y70n6aai-zen6kiu3ms.gz
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/zev6j7dt8k-2m21fqwujq.gz
-/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/zqse2g5zcq-d5djdh18s5.gz
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/axqpfitz8x-xyytbyd0pi.gz
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/cfoelyc6n4-iw90lpb2eo.gz
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/4i8m31tbd7-12fderrbxl.gz
-/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/d55fuqwyh1-tiixfvlxa6.gz
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/z8lzj4jap4-rk9ec66qef.gz
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/6tipmwg77q-9fil0umztb.gz
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/76cmwut53j-2g6ogqqlfd.gz
@@ -1517,8 +1511,6 @@
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/n6rl89ozyf-ch6ymde95o.gz
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/xr366ub96y-dscal1hcaf.gz
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/3k3e7gejth-quyyt3qgis.gz
-/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/8mllxiv9sk-ohgcje13t0.gz
-/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/ds3fj7qb9y-devq2rv71h.gz
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/b7w348f2by-waxs344vxl.gz
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/2aotj1mqrc-qgw1r6r2me.gz
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/66b23ojbnr-mlm8u9cngp.gz
@@ -2652,8 +2644,9 @@
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/AMS.genruntimeconfig.cache
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/ref/AMS.dll
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/5bejwj8yaf-apfb34kl2t.gz
-/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/gv23mvwfpp-5h8xarma2i.gz
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/xgad8dxbjq-pz9brgkfl6.gz
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/bin/Debug/net9.0/railway.json
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/AMS.sourcelink.json
 /Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/bin/Debug/net9.0/web.config
+/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/7drdjstmup-pojvbx3ng4.gz
+/Users/developer/Desktop/assetmanagement-200/codecanyon-35428820-asset-management-system-aspnet-core-ef-core-net-core-31/AMS/obj/Debug/net9.0/compressed/gv23mvwfpp-krslv8sfru.gz

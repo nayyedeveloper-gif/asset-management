@@ -261,30 +261,6 @@ a:hover {
     border-radius: 0 0 12px 12px;
 }
 
-/* Professional Sidebar Styling */
-.sidebar {
-    background-color: #1e293b;
-    border-right: 1px solid #334155;
-}
-
-.sidebar-dark .nav-sidebar .nav-link {
-    color: #cbd5e1;
-    border-radius: 8px;
-    margin: 2px 8px;
-    padding: 10px 16px;
-    transition: all 0.2s ease;
-}
-
-.sidebar-dark .nav-sidebar .nav-link:hover {
-    background-color: #334155;
-    color: white;
-}
-
-.sidebar-dark .nav-sidebar .nav-link.active {
-    background-color: #3b82f6;
-    color: white;
-}
-
 /* Professional Header Styling */
 .main-header {
     background-color: white;
